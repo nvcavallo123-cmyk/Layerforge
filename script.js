@@ -1,0 +1,7 @@
+const hours=document.querySelector("#hours"),grams=document.querySelector("#grams"),qty=document.querySelector("#qty"),price=document.querySelector("#price");
+function calc(){const h=Math.max(.5,+hours.value||0),g=Math.max(1,+grams.value||0),q=Math.max(1,+qty.value||1);const total=(4+h*2.4+g*.045)*q;price.textContent="$"+total.toFixed(2)}
+[hours,grams,qty].forEach(x=>x.addEventListener("input",calc));calc();
+
+document.querySelector("#quoteForm").addEventListener("submit",e=>{e.preventDefault();document.querySelector("#formMsg").textContent="Thanks! Your quote request is ready. Connect this form to your email/order system to receive submissions.";});
+document.querySelector("#trackForm").addEventListener("submit",e=>{e.preventDefault();const n=document.querySelector("#order").value.trim();document.querySelector("#trackMsg").textContent=n?`Demo status for ${n}: Quote received → Awaiting production.`:"Please enter an order number.";});
+document.querySelector(".menu").addEventListener("click",()=>{document.querySelector(".nav nav").style.display=document.querySelector(".nav nav").style.display==="flex"?"none":"flex";document.querySelector(".nav nav").style.position="absolute";document.querySelector(".nav nav").style.top="76px";document.querySelector(".nav nav").style.right="5vw";document.querySelector(".nav nav").style.background="#fff";document.querySelector(".nav nav").style.padding="20px";document.querySelector(".nav nav").style.flexDirection="column";});

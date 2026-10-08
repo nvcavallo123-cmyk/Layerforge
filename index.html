@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LayerForge — Custom 3D Printing</title>
+<meta name="description" content="LayerForge custom 3D printing made to order. Upload a model, get a quote and bring your ideas to life.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top"><span class="logo-mark">LF</span><span>Layer<span>Forge</span></span></a>
+  <nav>
+    <a href="#designs">Designs</a><a href="#how">How it works</a><a href="#quote">Get a quote</a><a href="#track">Track</a>
+  </nav>
+  <a class="nav-cta" href="#quote">Start an order</a>
+  <button class="menu" aria-label="Menu">☰</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="pill"><span></span> NOW TAKING ORDERS</div>
+    <h1>Your idea.<br><em>Layer by layer.</em></h1>
+    <p>Custom 3D printing for prototypes, parts, gifts, models and everything in between. Send a file or tell us what you have in mind.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#quote">Start a project →</a><a class="btn ghost" href="#designs">Browse designs</a></div>
+    <div class="trust"><b>✓</b> Custom quotes &nbsp; <b>✓</b> Quality checked &nbsp; <b>✓</b> AU-wide shipping</div>
+  </div>
+  <div class="hero-art">
+    <div class="orb"></div><div class="cube"><div></div><div></div><div></div></div>
+    <div class="spec spec1"><b>0.20mm</b><small>Layer height</small></div>
+    <div class="spec spec2"><b>PLA · PETG</b><small>Materials</small></div>
+  </div>
+</section>
+
+<section class="ticker"><span>BUILT TO ORDER</span><i>✦</i><span>SMALL BATCHES</span><i>✦</i><span>CUSTOM PARTS</span><i>✦</i><span>MADE IN AUSTRALIA</span></section>
+
+<section id="designs" class="section">
+  <div class="section-head"><div><p class="eyebrow">FEATURED WORK</p><h2>Things we've made.</h2></div><a href="#quote">Have something else in mind →</a></div>
+  <div class="cards">
+    <article class="card"><div class="product visual-one">⌂</div><h3>Custom Name Sign</h3><p>Personalised wall and desk signage.</p><strong>From $18</strong></article>
+    <article class="card"><div class="product visual-two">⚙</div><h3>Functional Parts</h3><p>Brackets, covers, adapters and replacements.</p><strong>From $12</strong></article>
+    <article class="card"><div class="product visual-three">✦</div><h3>Display Models</h3><p>Decor, miniatures and one-off creations.</p><strong>From $20</strong></article>
+  </div>
+</section>
+
+<section id="how" class="dark-section">
+  <div class="section-head light"><div><p class="eyebrow">SIMPLE PROCESS</p><h2>From file to finished.</h2></div></div>
+  <div class="steps">
+    <div><span>01</span><h3>Tell us what you need</h3><p>Upload your STL/3MF/OBJ or describe your idea.</p></div>
+    <div><span>02</span><h3>Get your quote</h3><p>We check the model and send pricing before printing.</p></div>
+    <div><span>03</span><h3>We print it</h3><p>Your part is printed, checked and prepared for pickup or shipping.</p></div>
+    <div><span>04</span><h3>Track your order</h3><p>Use your order number to see the latest status.</p></div>
+  </div>
+</section>
+
+<section id="quote" class="section quote-section">
+  <div class="quote-copy"><p class="eyebrow">CUSTOM ORDER</p><h2>Let's make it real.</h2><p>No perfect CAD file required. If you only have an idea, that's fine — describe it and we'll work from there.</p><div class="quote-note">Free quote · No obligation · We confirm everything before printing</div></div>
+  <form id="quoteForm" class="form">
+    <label>Your name<input required name="name" placeholder="Your name"></label>
+    <label>Email<input required type="email" name="email" placeholder="you@example.com"></label>
+    <label>What are you making?<textarea required name="idea" rows="4" placeholder="Tell us about your project..."></textarea></label>
+    <label>Material<select name="material"><option>PLA</option><option>PETG</option><option>TPU</option><option>Not sure</option></select></label>
+    <label>File (optional)<input type="file" accept=".stl,.3mf,.obj,.step,.stp"></label>
+    <button class="btn primary full" type="submit">Request a quote →</button>
+    <p id="formMsg" class="form-msg"></p>
+  </form>
+</section>
+
+<section id="estimate" class="estimator">
+  <div><p class="eyebrow">QUICK ESTIMATE</p><h2>Get a rough idea of cost.</h2><p>This is an estimate only. Final pricing depends on model size, material, print time and finishing.</p></div>
+  <div class="calc">
+    <label>Print time (hours)<input id="hours" type="number" min="0.5" value="2" step="0.5"></label>
+    <label>Material used (grams)<input id="grams" type="number" min="1" value="80"></label>
+    <label>Quantity<input id="qty" type="number" min="1" value="1"></label>
+    <div class="price"><small>Estimated starting price</small><strong id="price">$0.00</strong></div>
+  </div>
+</section>
+
+<section id="track" class="section track-section">
+  <div><p class="eyebrow">ORDER TRACKING</p><h2>Where's my print?</h2><p>Enter your order number to see a demo status. Connect this form to your order system when you're ready to go live.</p></div>
+  <form id="trackForm" class="track-form"><input id="order" placeholder="e.g. LF-1024" required><button class="btn primary">Track order</button><div id="trackMsg"></div></form>
+</section>
+</main>
+
+<footer><div class="brand"><span class="logo-mark">LF</span><span>Layer<span>Forge</span></span></div><p>Custom 3D printing, made one layer at a time.</p><div><a href="#quote">Contact</a><a href="#how">How it works</a><a href="#top">Back to top ↑</a></div><small>© 2026 LayerForge. All rights reserved.</small></footer>
+<script src="script.js"></script>
+</body>
+</html>
