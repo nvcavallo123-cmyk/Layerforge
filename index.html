@@ -56,12 +56,12 @@
 
 <section id="quote" class="section quote-section">
   <div class="quote-copy"><p class="eyebrow">CUSTOM ORDER</p><h2>Let's make it real.</h2><p>No perfect CAD file required. If you only have an idea, that's fine — describe it and we'll work from there.</p><div class="quote-note">Free quote · No obligation · We confirm everything before printing</div></div>
-  <form id="quoteForm" class="form">
+  <form id="quoteForm" class="form" action="https://formspree.io/f/xgaoarrk" method="POST">
     <label>Your name<input required name="name" placeholder="Your name"></label>
     <label>Email<input required type="email" name="email" placeholder="you@example.com"></label>
     <label>What are you making?<textarea required name="idea" rows="4" placeholder="Tell us about your project..."></textarea></label>
     <label>Material<select name="material"><option>PLA</option><option>PETG</option><option>TPU</option><option>Not sure</option></select></label>
-    <label>File (optional)<input type="file" accept=".stl,.3mf,.obj,.step,.stp"></label>
+    <label>Link to your file (optional)<input type="url" name="file_link" placeholder="Dropbox / Google Drive link to your STL, 3MF or STEP file"></label>
     <button class="btn primary full" type="submit">Request a quote →</button>
     <p id="formMsg" class="form-msg"></p>
   </form>
